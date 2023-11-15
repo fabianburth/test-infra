@@ -37,6 +37,7 @@ import (
 // GetComponents returns a list of all git/component dependencies.
 // todo: re-enable component validation
 func GetComponents(ctx context.Context, log logr.Logger, ociClient ociclient.Client, content []byte) (ComponentList, error) {
+
 	components := components{
 		components:   make([]*Component, 0),
 		componentSet: make(map[Component]bool),
